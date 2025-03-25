@@ -11,6 +11,9 @@ public class TiendaService {
     public List<Computador> listarComputadores() {
         return computadores;
     }
+    public boolean eliminarComputador(String marca) {
+        return computadores.removeIf(c -> c.getMarca().equals(marca));
+    }
 }
 
 
