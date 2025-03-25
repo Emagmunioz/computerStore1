@@ -14,6 +14,12 @@ public class TiendaService {
     public boolean eliminarComputador(String marca) {
         return computadores.removeIf(c -> c.getMarca().equals(marca));
     }
+    public Computador buscarComputador(String marca) {
+        return computadores.stream()
+                .filter(c -> c.getMarca().equals(marca))
+                .findFirst()
+                .orElse(null);
+    }
 }
 
 
