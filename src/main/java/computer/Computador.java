@@ -7,6 +7,13 @@ public class Computador {
         this.marca = marca;
     }
     public String getMarca() { return marca; }
+    
+    private final int memoria;         
+
+    this.memoria = memoria;
+    public int getMemoria() { return memoria; }
+    
+   
 }
 
 
