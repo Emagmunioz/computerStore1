@@ -1,17 +1,12 @@
 package computer;
-
-/**
- * Hello world!
- */
+import computer.TiendaService;
+import computer.Computador;
 public final class App {
-    private App() {
-    }
-
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+    // TiendaApp.java
+public void ejecutar() {
+    
+    tiendaService.agregarComputador(new Computador("Dell", 16, "i7", "Windows", 1500.0));
+    tiendaService.agregarComputador(new Computador("HP", 8, "Ryzen", "Linux", 1000.0));
+}
+   
 }
