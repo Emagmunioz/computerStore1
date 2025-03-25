@@ -20,5 +20,12 @@ public void whenDeleteComputador_thenListIsEmpty() {
     assertThat(service.eliminarComputador("Dell"), is(true)); 
    
 }
+@Test
+public void whenSearchComputador_thenReturnsCorrectItem() {
+    TiendaService service = new TiendaService();
+    service.agregarComputador(new Computador("Lenovo", 32, "i9", "Linux", 2000.0));
+    assertThat(service.buscarComputador("Lenovo"), 
+        hasProperty("procesador", is("i9"))); 
+}
 
 }
