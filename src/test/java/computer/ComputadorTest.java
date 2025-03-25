@@ -9,5 +9,9 @@ public void whenCreateComputador_thenPropertiesSetCorrectly() {
     Computador pc = new Computador("Dell", 16, "i7", "Windows", 1500.0);
     assertThat(pc.getMarca(), is("Dell")); 
 }
-
+@Test
+public void whenGetMemoria_thenReturnsCorrectValue() {
+    Computador pc = new Computador("Dell", 16, "i7", "Windows", 1500.0);
+    assertThat(pc.getMemoria(), is(16)); 
+}
 }
