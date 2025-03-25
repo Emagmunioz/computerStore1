@@ -1,5 +1,8 @@
 package computer;
-
+import static org.hamcrest.CoreMatchers.hasItem;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasProperty;
 import org.junit.jupiter.api.Test;
 
 public class TiendaServiceTest {
@@ -8,7 +11,7 @@ public class TiendaServiceTest {
 public void whenAddComputador_thenListContainsIt() {
     TiendaService service = new TiendaService();
     service.agregarComputador(new Computador("HP", 8, "Ryzen", "Linux", 1000.0));
-    assertThat(service.listarComputadores(), hasItem(hasProperty("marca", is("HP")))); // Fails
+    assertThat(service.listarComputadores(), hasItem(hasProperty("marca", is("HP")))); 
 }
 
 }
