@@ -4,15 +4,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
- * Unit test for simple App.
- */
+
 class AppTest {
-    /**
-     * Rigorous Test.
-     */
     @Test
-    void testApp() {
-        assertEquals(1, 1);
-    }
+public void whenEjecutar_thenAddsTwoComputers() {
+    TiendaService mockService = mock(TiendaService.class);
+    TiendaApp app = new TiendaApp(mockService);
+    
+    app.ejecutar(); // Fails
+    
+    verify(mockService, times(2)).agregarComputador(
+        argThat(c -> c.getMemoria() > 0)); // Hamcrest + Mockito
+}
+   
 }
